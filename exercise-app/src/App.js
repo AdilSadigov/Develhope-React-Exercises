@@ -6,5 +6,3 @@ export class App extends React.Component {
         return <Welcome name = {<strong>Adil</strong>} age = {23}/>
     }
 }
-
-// If the prop is a JSX expression instead of a string, you need to use curly braces
