@@ -4,6 +4,6 @@ import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
     render () {
-        return <Counter />
+        return <Counter initialValue = {0} incrementAmount = {1} incrementInterval ={1000}/>
     }
 }
