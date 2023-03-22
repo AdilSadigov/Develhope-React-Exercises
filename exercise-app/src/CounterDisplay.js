@@ -5,5 +5,3 @@ export class CounterDisplay extends React.Component {
         return <h1>{this.props.count}</h1>
     }
 }
-
-// I hope I understand the question correctly
