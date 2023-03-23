@@ -29,7 +29,3 @@ export class Counter extends React.Component {
         return <CounterDisplay count = {this.state.count}/>
     }
 }
-
-// The constructor is called only once when the component is created, 
-// whereas componentDidMount is called every time the component is mounted in the DOM.
-// If there are other variables or state that need to be initialized in the constructor, it may still be required
