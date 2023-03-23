@@ -5,6 +5,7 @@ import { Colors } from "./Colors";
 import { Counter } from "./Counter";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
@@ -16,6 +17,6 @@ export class App extends React.Component {
             {id: 3, name: 'Green'}
         ]
 
-        return <Colors colors = {colorsList}/>
+        return <TodoList/>
     }
 }
