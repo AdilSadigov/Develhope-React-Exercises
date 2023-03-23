@@ -22,7 +22,7 @@ export class Login extends React.Component {
         return <div>
             <input name="username" value={this.state.username} onChange={this.handleInputChange}/>
             <input name="password" type="password" value={this.state.password} onChange={this.handleInputChange} style={{margin: '0px 10px'}}/>
-            <input name="remember" type="checkbox" value={this.state.remember} onChange={this.handleInputChange}/>
+            <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange}/> 
         </div>
     }
 }
