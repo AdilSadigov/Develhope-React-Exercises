@@ -10,6 +10,12 @@ import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
     render () {
-        return <Colors colors ={['Blue', 'Red', 'Green']}/>
+        const colorsList = [
+            {id: 1, name: 'Blue'},
+            {id: 2, name: 'Red'},
+            {id: 3, name: 'Green'}
+        ]
+
+        return <Colors colors = {colorsList}/>
     }
 }
