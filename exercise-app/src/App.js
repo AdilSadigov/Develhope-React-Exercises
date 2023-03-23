@@ -4,10 +4,11 @@ import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
     render () {
-        return <Login/>
+        return <UncontrolledLogin/>
     }
 }
