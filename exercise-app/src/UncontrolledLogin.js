@@ -20,7 +20,7 @@ export class UncontrolledLogin extends React.Component {
     render() {
         return <div>
             <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-                <input name="username"/>
+                <input name="username" autoFocus/>
                 <input name="password" type="password" style={{margin: '0px 10px'}}/>
                 <input name="remember" type="checkbox"/>
 
