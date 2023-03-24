@@ -17,6 +17,6 @@ export class App extends React.Component {
         //     {id: 3, name: 'Green'}
         // ]
 
-        return <Welcome name="Adil"/>
+        return <Login/>
     }
 }
