@@ -11,12 +11,12 @@ import { Welcome } from "./Welcome";
 
 export class App extends React.Component {
     render () {
-        const colorsList = [
-            {id: 1, name: 'Blue'},
-            {id: 2, name: 'Red'},
-            {id: 3, name: 'Green'}
-        ]
+        // const colorsList = [
+        //     {id: 1, name: 'Blue'},
+        //     {id: 2, name: 'Red'},
+        //     {id: 3, name: 'Green'}
+        // ]
 
-        return <TodoList/>
+        return <Welcome name="Adil"/>
     }
 }
