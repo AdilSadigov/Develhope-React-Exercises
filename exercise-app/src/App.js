@@ -33,7 +33,7 @@ export class App extends React.Component {
                     <option value="tr">Türkçe</option>
                 </select>
                 <LanguageContext.Provider value={this.state.language}>
-                    <DisplayLanguage name="Adil"/>
+                    <DisplayLanguage/>
                 </LanguageContext.Provider>
             </div>
         )

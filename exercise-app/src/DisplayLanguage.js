@@ -3,16 +3,16 @@ import { LanguageContext } from "./LanguageContext";
 
 const Strings = {
     en: {
-        WelcomeTxt: "Welcome, "
+        language: "English"
     },
     it: {
-        WelcomeTxt: "Benvenuto, "
+        language: "Italiano"
     },
     ru: {
-        WelcomeTxt: "Добро пожаловать, "
+        language: "Русский"
     },
     tr: {
-        WelcomeTxt: "Hoş geldin, "
+        language: "Türkçe"
     }
 }
 
@@ -21,7 +21,7 @@ export class DisplayLanguage extends React.Component {
         return <div>
                  <LanguageContext.Consumer>
                     { (language) => {
-                        return <h1>{Strings[language].WelcomeTxt} {this.props.name}</h1>
+                        return <h1>{Strings[language].language}</h1>
                     }}
                 </LanguageContext.Consumer>
         </div>
