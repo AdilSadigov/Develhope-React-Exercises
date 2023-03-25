@@ -1,3 +1,5 @@
+import React from "react";
+
 export function Sum (props) {
 
     const sum = props.numbers.reduce((a, b) => a + b)
