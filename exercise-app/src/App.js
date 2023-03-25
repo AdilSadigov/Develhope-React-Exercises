@@ -11,6 +11,7 @@ import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
+import { Sum } from "./Sum";
 
 export class App extends React.Component {
     state = {
@@ -26,7 +27,7 @@ export class App extends React.Component {
     render () {
         return (
             <div>
-                <Welcome name = "Adil"/>
+                <Sum numbers = {[1, 2, 3, 4, 5, 6, 7]}/>
             </div>
         )
     }
