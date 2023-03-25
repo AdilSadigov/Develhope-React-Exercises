@@ -4,35 +4,38 @@ import { ClickTracker } from "./ClickTracker";
 import { Colors } from "./Colors";
 import { Container } from "./Container";
 import { Counter } from "./Counter";
+import { DisplayLanguage } from "./DisplayLanguage";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+import { LanguageContext } from "./LanguageContext";
 
 export class App extends React.Component {
-    render () {
-        // const colorsList = [
-        //     {id: 1, name: 'Blue'},
-        //     {id: 2, name: 'Red'},
-        //     {id: 3, name: 'Green'}
-        // ]
+    state = {
+        language: 'en'
+    }
 
+    handleLanguageChange = (event) => {
+        this.setState ({
+            language: event.target.value
+        })
+    }
+
+    render () {
         return (
-            <TodoList> 
-                {(items, removeItem) => {
-                    return (
-                        <ul>
-                            {items.map((item, index) => (
-                                <li key={index} style={{marginBottom: '8px'}}>
-                                    {item} 
-                                    <button onClick={() => removeItem(index)} style={{marginLeft: '10px'}}>Remove</button>
-                                </li>
-                            ))}
-                        </ul>
-                    )
-                }}
-            </TodoList>
+            <div>
+                <select value={this.state.language} onChange={this.handleLanguageChange}>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                    <option value="ru">Русский</option>
+                    <option value="tr">Türkçe</option>
+                </select>
+                <LanguageContext.Provider value={this.state.language}>
+                    <DisplayLanguage name="Adil"/>
+                </LanguageContext.Provider>
+            </div>
         )
     }
 }
