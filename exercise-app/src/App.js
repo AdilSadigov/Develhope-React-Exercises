@@ -27,7 +27,7 @@ export class App extends React.Component {
     render () {
         return (
             <div>
-                <Sum />
+                <ClickCounter />
             </div>
         )
     }
