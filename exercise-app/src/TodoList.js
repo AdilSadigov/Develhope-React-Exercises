@@ -43,7 +43,7 @@ export class TodoList extends React.Component {
                 <button onClick={this.removeAllItems} style={{marginLeft: '10px'}}>Reset</button>
                 <h3>Todo List:</h3>
 
-                {this.props.render(this.state.items, this.removeItem)}
+                {this.props.children(this.state.items, this.removeItem)}
 
                 {/* <ul>
                     {this.state.items.map((item, index) => (
@@ -53,7 +53,7 @@ export class TodoList extends React.Component {
                         </li>
                     ))}
                 </ul> */}
-                
+
             </div>
         )
     }
