@@ -18,8 +18,19 @@ export class App extends React.Component {
         //     {id: 3, name: 'Green'}
         // ]
 
-        return <Container title = "Hello, world!">
-                <p>Some Text Here</p>
-        </Container>
+        return (
+            <TodoList render={(items, removeItem) => {
+                return (
+                    <ul>
+                        {items.map((item, index) => (
+                            <li key={index} style={{marginBottom: '8px'}}>
+                                {item} 
+                                <button onClick={() => removeItem(index)} style={{marginLeft: '10px'}}>Remove</button>
+                            </li>
+                        ))}
+                    </ul>
+                )
+            }}/>
+        )
     }
 }

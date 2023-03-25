@@ -42,14 +42,18 @@ export class TodoList extends React.Component {
                 <button onClick={this.addItem} style={{marginLeft: '10px'}}>Add to list</button>
                 <button onClick={this.removeAllItems} style={{marginLeft: '10px'}}>Reset</button>
                 <h3>Todo List:</h3>
-                <ul>
+
+                {this.props.render(this.state.items, this.removeItem)}
+
+                {/* <ul>
                     {this.state.items.map((item, index) => (
                         <li key={index} style={{marginBottom: '8px'}}>
                             {item} 
                             <button onClick={() => this.removeItem(index)} style={{marginLeft: '10px'}}>Remove</button>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
+                
             </div>
         )
     }
