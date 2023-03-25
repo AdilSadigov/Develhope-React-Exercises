@@ -18,8 +18,7 @@ export class App extends React.Component {
         //     {id: 3, name: 'Green'}
         // ]
 
-        return <Container>
-                <h1>Hello, world!</h1>
+        return <Container title = "Hello, world!">
                 <p>Some Text Here</p>
         </Container>
     }
