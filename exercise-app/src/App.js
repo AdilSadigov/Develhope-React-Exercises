@@ -9,5 +9,5 @@ import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 
 export function App() {
-    return <GithubUser username="AdilSadigov"/>
+    return <ClickCounter/>
 }
