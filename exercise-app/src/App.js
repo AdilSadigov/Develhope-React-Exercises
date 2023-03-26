@@ -1,4 +1,5 @@
 import React from "react";
+import { CarDetails } from "./CarDetails";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Counter } from "./Counter";
@@ -20,5 +21,15 @@ import { Welcome } from "./Welcome";
 // ];
 
 export function App() {
-    return <Login/>
+    
+    const initialData = {
+        model: "Lada Priora",
+        year: 2022,
+        color: "Matte black",
+    };
+
+    return (
+        <CarDetails initialData={initialData} />
+    );
 }
+
