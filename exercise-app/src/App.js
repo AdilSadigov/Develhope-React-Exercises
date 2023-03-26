@@ -8,6 +8,18 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 
-export function App() {
-    return <ClickCounter/>
+export class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.onLogin = this.onLogin.bind(this);
+    }
+
+    onLogin(username, password, event) {
+        event.preventDefault();
+        console.log(username, password);
+    }
+
+    render () {
+        return <Login onLogin={this.onLogin} />
+    }
 }
