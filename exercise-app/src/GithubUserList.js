@@ -13,6 +13,8 @@ export function GithubUserList({error}) {
             setUsernames([...usernames, newUsername])
             input.value = ''
         }
+
+        console.log(error)
     }
 
     return <div>
