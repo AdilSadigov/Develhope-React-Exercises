@@ -1,35 +1,41 @@
 import React from "react";
-import { CarDetails } from "./CarDetails";
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
+import { Colors } from "./Colors";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
-import { FilteredList } from "./FilteredList";
-import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
+import { DisplayLanguage } from "./DisplayLanguage";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { TodoList } from "./TodoList";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+import { LanguageContext } from "./LanguageContext";
 
-// const users = [
-//    {id: 1, name: 'Person1', age: 22},
-//    {id: 2, name: 'Person2', age: 28},
-//    {id: 3, name: 'Person3', age: 16},
-//    {id: 4, name: 'Person4', age: 14},
-//    {id: 5, name: 'Person5', age: 40},
-//    {id: 6, name: 'Person6', age: 17},
-//    {id: 7, name: 'Person7', age: 20},
-// ];
+export class App extends React.Component {
+    state = {
+        language: 'en'
+    }
 
-export function App() {
-    
-    const initialData = {
-        model: "Lada Priora",
-        year: 2022,
-        color: "Matte black",
-    };
+    handleLanguageChange = (event) => {
+        this.setState ({
+            language: event.target.value
+        })
+    }
 
-    return (
-        <CarDetails initialData={initialData} />
-    );
+    render () {
+        return (
+            <div>
+                <select value={this.state.language} onChange={this.handleLanguageChange}>
+                    <option value="en">English</option>
+                    <option value="it">Italiano</option>
+                    <option value="ru">Русский</option>
+                    <option value="tr">Türkçe</option>
+                </select>
+                <LanguageContext.Provider value={this.state.language}>
+                    <DisplayLanguage/>
+                </LanguageContext.Provider>
+            </div>
+        )
+    }
 }
-
