@@ -6,8 +6,6 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { Welcome } from "./Welcome";
 
-export function App() {  
-
-    return <ClickCounter />
-
+export function App() {
+    return <Counter/>
 }
