@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { GithubUser } from "./GithubUser"
 
-export function GithubUserList() {
+export function GithubUserList({error}) {
 
     const [usernames, setUsernames] = useState([])
 
@@ -13,8 +13,6 @@ export function GithubUserList() {
             setUsernames([...usernames, newUsername])
             input.value = ''
         }
-
-        console.log(usernames)
     }
 
     return <div>
@@ -24,9 +22,9 @@ export function GithubUserList() {
         </form>
         <ul>
             {usernames.map((username, index) => (
-            <li key={index}>
-                <GithubUser username={username} />
-            </li>
+                <li key={index}>
+                    <GithubUser username={username} />
+                </li>
             ))}
         </ul>
     </div>
