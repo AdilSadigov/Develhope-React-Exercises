@@ -12,7 +12,6 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
 import { Route, Routes } from "react-router-dom";
-import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
 
@@ -20,7 +19,6 @@ export function App() {
         <Routes>
             <Route path="/" element={<Welcome name="Adil"/>} />
             <Route path="/counter" element={<Counter/>} />
-            <Route path="/users/:username" element={<ShowGithubUser />} />
         </Routes>
     )
 }
