@@ -25,11 +25,10 @@ export function App() {
                 <Route path="/counter" element={<Counter/>} />
                 <Route path="/users/:username" element={<ShowGithubUser />} />
                 <Route path="*" element={<h3>Not Found</h3>} />
-                <Route path="/users" element={<GithubUserList />} />
             </Routes>
             <Link to ="/">Home </Link> <br/>
             <Link to ="counter">Counter </Link> <br/>
-            <Link to ="users">Users </Link>
+            <Link to ="users/AdilSadigov">Users </Link>
         </div>
     )
 }
