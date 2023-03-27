@@ -13,6 +13,8 @@ import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
 import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
+import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export function App() {
 
@@ -23,10 +25,11 @@ export function App() {
                 <Route path="/counter" element={<Counter/>} />
                 <Route path="/users/:username" element={<ShowGithubUser />} />
                 <Route path="*" element={<h3>Not Found</h3>} />
+                <Route path="/users" element={<GithubUserList />} />
             </Routes>
             <Link to ="/">Home </Link> <br/>
             <Link to ="counter">Counter </Link> <br/>
-            <Link to ="users/AdilSadigov">Users </Link>
+            <Link to ="users">Users </Link>
         </div>
     )
 }
