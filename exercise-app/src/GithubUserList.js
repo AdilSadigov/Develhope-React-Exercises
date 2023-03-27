@@ -26,7 +26,7 @@ export function GithubUserList({error}) {
         </form>
         <Routes>
             {usernames.map((username, index) => (
-            <Route key={index} path={`/users/${username}`} element={<ShowGithubUser username={username} />} />
+                <Route key={index} path={`/users/${username}`} element={<ShowGithubUser username={username} />} />
             ))}
         </Routes>
         <ul>
