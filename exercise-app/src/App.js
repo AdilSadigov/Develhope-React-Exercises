@@ -11,16 +11,21 @@ import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
 
     return (
-        <Routes>
-            <Route path="/" element={<Welcome name="Adil"/>} />
-            <Route path="/counter" element={<Counter/>} />
-            <Route path="/users/:username" element={<ShowGithubUser />} />
-        </Routes>
+        <div>
+            <Routes>
+                <Route path="/" element={<Welcome name="Adil"/>} />
+                <Route path="/counter" element={<Counter/>} />
+                <Route path="/users/:username" element={<ShowGithubUser />} />
+            </Routes>
+            <Link to ="/">Home </Link> <br/>
+            <Link to ="counter">Counter </Link> <br/>
+            <Link to ="users/AdilSadigov">Users </Link>
+        </div>
     )
 }
