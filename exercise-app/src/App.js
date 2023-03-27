@@ -11,31 +11,13 @@ import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
+import { Route, Routes } from "react-router-dom";
 
-export class App extends React.Component {
-    state = {
-        language: 'en'
-    }
+export function App() {
 
-    handleLanguageChange = (event) => {
-        this.setState ({
-            language: event.target.value
-        })
-    }
-
-    render () {
-        return (
-            <div>
-                <select value={this.state.language} onChange={this.handleLanguageChange}>
-                    <option value="en">English</option>
-                    <option value="it">Italiano</option>
-                    <option value="ru">Русский</option>
-                    <option value="tr">Türkçe</option>
-                </select>
-                <LanguageContext.Provider value={this.state.language}>
-                    <DisplayLanguage/>
-                </LanguageContext.Provider>
-            </div>
-        )
-    }
+    return (
+        <Routes>
+            <Route path="/" element={<Welcome name="Adil"/>} />
+        </Routes>
+    )
 }
