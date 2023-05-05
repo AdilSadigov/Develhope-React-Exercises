@@ -13,7 +13,6 @@ import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
 import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
-import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 
 export function App() {
