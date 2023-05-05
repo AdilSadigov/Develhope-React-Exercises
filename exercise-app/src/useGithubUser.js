@@ -8,9 +8,9 @@ export function useGithubUser(username) {
     
     const { data, error, mutate } = useSWR(url)
 
-    function fetchGithubUser() {
+    function refetch () {
         mutate()
     }
     
-    return { data, error, loading: !data && !error, onFetchUser: fetchGithubUser}
+    return { data, error, loading: !data && !error, refetch }
 }

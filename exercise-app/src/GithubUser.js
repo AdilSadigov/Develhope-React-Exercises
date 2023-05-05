@@ -3,10 +3,10 @@ import { useGithubUser } from "./useGithubUser"
 
 export function GithubUser() {
     const { username } = useParams()
-    const { data, loading, error, onFetchUser } = useGithubUser(username)
+    const { data, loading, error, refetch } = useGithubUser(username)
 
     function handleGetUserData () {
-        onFetchUser()
+        refetch()
     }
 
     return <div>
